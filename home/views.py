@@ -1,5 +1,6 @@
 from django.shortcuts import render
+from datetime import datetime
 
 # Create your views here.
 def home(request):
-    render(request, 'home/Welcome.html', {})
+    return render(request, 'home/welcome.html', {'today':datetime.now()})
